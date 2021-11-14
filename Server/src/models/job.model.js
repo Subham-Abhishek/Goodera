@@ -20,6 +20,16 @@ const jobSchema = new mongoose.Schema({
         type: String,
         required: true,
         trim: true
+    },
+    level: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    image: {
+        type: String,
+        required: true,
+        trim: true
     }
 })
 

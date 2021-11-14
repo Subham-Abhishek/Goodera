@@ -1,7 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 
 export const Searchbox = () => {
+
+    const [location, setLocation] = React.useState("");
+
   return (
     <Div>
       <div className="searchBox1">
@@ -38,9 +45,22 @@ export const Searchbox = () => {
             stroke-linejoin="round"
           />
         </svg>
-        <select>
-          <option>Select Location</option>
-        </select>
+        <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">Age</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={location}
+          label="Select Location"
+          onChange={(e) => setLocation(e.target.value)}
+        >
+          <MenuItem value={'Remote'}>Remote</MenuItem>
+          <MenuItem value={'Berlin, Germany'}>Berlin, Germany</MenuItem>
+          <MenuItem value={'Gurgaon, India'}>Gurgaon, India</MenuItem>
+          <MenuItem value={'Hyderabad, India'}>Hyderabad, India</MenuItem>
+        </Select>
+      </FormControl>
+
       </div>
       <button className="searchButton">Search</button>
     </Div>
@@ -71,7 +91,7 @@ const Div = styled.div`
       border: none;
       width: 90%;
       &::placeholder {
-        font-family: Poppins;
+        font-family: sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
@@ -87,19 +107,6 @@ const Div = styled.div`
     align-items: center;
     gap: 10px;
     width: 30%;
-    select {
-      outline: none;
-      border: none;
-      background: none;
-      width: 90%;
-      font-family: Poppins;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 24px;
-      font-weight: 400;
-      color: #7b7b7b;
-    }
   }
   .searchButton {
     width: 17%;

@@ -11,7 +11,7 @@ app.use(express.json());
 
 const jobController = require('./controllers/job.controller');
 
-app.use('/',jobController);
+app.use('/job',jobController);
 
 app.listen(port, () => {
     console.log("Connections listening on port " + port);

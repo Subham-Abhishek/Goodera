@@ -1,6 +1,7 @@
 import React from "react";
 import { Searchbox } from "./Searchbox";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
@@ -26,7 +27,7 @@ export const Navbar = () => {
             <div>JobHunt</div>
           </div>
           <div>
-            <div>Find Jobs</div>
+            <Link to="/"><div>Find Jobs</div></Link>
             <div className="jobsUnderline"></div>
           </div>
           <div>
@@ -34,7 +35,7 @@ export const Navbar = () => {
           </div>
         </section>
         <section className="navSection2">
-          <p>Post a job</p>
+          <Link to="/post"><p>Post a job</p></Link>
           <p>Sign in</p>
         </section>
       </nav>
@@ -42,7 +43,7 @@ export const Navbar = () => {
         <h1>Find Your Dream Job</h1>
         <p>Browse through thousands of full-time or part-time jobs near you</p>
       </div>
-      <Searchbox />
+      {/* <Searchbox /> */}
     </Header>
   );
 };
@@ -57,6 +58,7 @@ const Header = styled.header`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 90px;
   .navBar {
     width: 70%;
     font-size: 14px;
@@ -84,6 +86,7 @@ const Header = styled.header`
   }
   .heading {
     width: 70%;
+    transform: translateY(-130px);
     h1 {
       font-family: Poppins;
       font-style: normal;
