@@ -48,11 +48,6 @@ export const Searchbox = () => {
 };
 
 const Div = styled.div`
-  position: absolute;
-  width: 1154px;
-  height: 100px;
-  left: 143px;
-  top: 314px;
   width: 70%;
   min-height: 100px;
   height: auto;

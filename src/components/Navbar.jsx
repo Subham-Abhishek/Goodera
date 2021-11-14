@@ -48,12 +48,55 @@ export const Navbar = () => {
 };
 
 const Header = styled.header`
-    width: 100%;
-    height: 364px;
-    background: linear-gradient(274.83deg, #5db0df 0.58%, #5d7adf 74.3%);
-    padding-top: 34px;
+  width: 100%;
+  height: 364px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(274.83deg, #5db0df 0.58%, #5d7adf 74.3%);
+  padding-top: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .navBar {
+    width: 70%;
+    font-size: 14px;
+    color: #fff;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    height: auto;
+    .navSection1 {
+      width: 30%;
+      min-width: 340px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navSection2 {
+      width: 10%;
+      min-width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .heading {
+    width: 70%;
+    h1 {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 72px;
+      color: #ffffff;
+    }
+    p {
+      font-size: 20px;
+      font-size: 20px;
+      line-height: 30px;
+      color: #ffffff;
+    }
+  }
 `;
