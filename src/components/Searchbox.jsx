@@ -4,10 +4,19 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import axios from "axios";
 
-export const Searchbox = () => {
+export const Searchbox = ({setJobs}) => {
+    const [title, setTitle] = React.useState("");
+  const [location, setLocation] = React.useState("");
 
-    const [location, setLocation] = React.useState("");
+    const searchJob = () => {
+        axios.get(`http://localhost:8000/job?title=${title}&location=${location}`).then(({data}) => {
+            setJobs(data);
+        }).catch(e => {
+            console.log(e);
+        }) 
+    }
 
   return (
     <Div>
@@ -27,7 +36,7 @@ export const Searchbox = () => {
             stroke-linejoin="round"
           />
         </svg>
-        <input placeholder="Job title or keyword" />
+        <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Job title or keyword" />
       </div>
       <div className="searchBox2">
         <svg
@@ -46,11 +55,11 @@ export const Searchbox = () => {
           />
         </svg>
         <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Age</InputLabel>
+        <InputLabel id="demo-simple-select-label">Location</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={location}
+        //   value={location}
           label="Select Location"
           onChange={(e) => setLocation(e.target.value)}
         >
@@ -62,7 +71,7 @@ export const Searchbox = () => {
       </FormControl>
 
       </div>
-      <button className="searchButton">Search</button>
+      <button onClick={() => searchJob()} className="searchButton">Search</button>
     </Div>
   );
 };

@@ -4,8 +4,7 @@ import styled from "styled-components";
 import { Searchbox } from "./Searchbox";
 
 export const Jobs = () => {
-  const [title, setTitle] = React.useState("");
-  const [location, setLocation] = React.useState("");
+  
   const [page, setPage] = React.useState(1);
   const [limit, setLimit] = React.useState("");
   const [jobs, setJobs] = React.useState([]);
@@ -25,21 +24,27 @@ export const Jobs = () => {
   console.log(jobs);
 
   return (
-    <Grid>
-      <Searchbox />
-      {jobs.map((job) => {
-        return (
-          <Div key={job.id}>
-            <img src={job.image} alt="" />
-            <div className="details">
-              <h4>{job.title} - {job.company}</h4>
-              <p>{job.description.substring(0, 175)}</p>
-              <button>View Details</button>
-            </div>
-          </Div>
-        );
-      })}
-    </Grid>
+    <>
+      <div className="searching">
+        <Searchbox setJobs={setJobs} />
+      </div>
+      <Grid>
+        {jobs.map((job) => {
+          return (
+            <Div key={job.id}>
+              <img src={job.image} alt="" />
+              <div className="details">
+                <h4>
+                  {job.title} - {job.company}
+                </h4>
+                <p>{job.description.substring(0, 175)}</p>
+                <button>View Details</button>
+              </div>
+            </Div>
+          );
+        })}
+      </Grid>
+    </>
   );
 };
 
@@ -65,8 +70,8 @@ const Div = styled.div`
   }
   .details {
     text-align: justify;
-    h4{
-        margin-bottom: 20px;
+    h4 {
+      margin-bottom: 20px;
     }
     button {
       float: right;
