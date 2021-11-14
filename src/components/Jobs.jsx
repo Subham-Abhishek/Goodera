@@ -5,8 +5,8 @@ import { Searchbox } from "./Searchbox";
 
 export const Jobs = () => {
   
-  const [page, setPage] = React.useState(1);
-  const [limit, setLimit] = React.useState("");
+  const [page, ] = React.useState(1);
+  const [limit, ] = React.useState("");
   const [jobs, setJobs] = React.useState([]);
 
   const getJobs = React.useCallback(() => {

@@ -1,5 +1,4 @@
 import React from "react";
-import { Searchbox } from "./Searchbox";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
