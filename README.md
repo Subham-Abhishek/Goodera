@@ -2,6 +2,7 @@
 
 ### Demo Link : <a>https://goodera-assesment.netlify.app/</a> 
 
+
 ## Tech-stacks used for Frontend:
 1. ReactJS
 2. HTML5
@@ -16,6 +17,12 @@
 - Axios
 - react-router-dom
 - Styled Components
+
+## Images:
+
+![goodera.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1636899015176/PmEkfufyn.png)
+
+![goodera2.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1636899022839/prX07ddlK.png)
 
 
 ## Installation
