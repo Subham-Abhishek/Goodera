@@ -1,72 +1,58 @@
-# Getting Started with Create React App
+# Goodera Assessment - JobHunt (Full Stack App)
+
+### Demo Link : <a>https://goodera-assesment.netlify.app/</a> 
 
 
+## Tech-stacks used for Frontend:
+1. ReactJS
+2. HTML5
+3. CSS3
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tech-stacks we used for Backend:
+1. ExpressJS (Server - Node js)
+2. Mongodb (Database)
+3. Mongoose
 
-## Available Scripts
+## Tech libraries used:
+- Axios
+- react-router-dom
+- Styled Components
 
-In the project directory, you can run:
+## Images:
 
-### `yarn start`
+![goodera.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1636899015176/PmEkfufyn.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![goodera2.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1636899022839/prX07ddlK.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Use this command on your **git bash** to clone this project on your Local machine.
 
-### `yarn build`
+```bash
+git clone https://github.com/Subham-Abhishek/Goodera.git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Use this command after clone for install app dependency and app dependencies version updation.
+```bash
+npm install || npm i || yarn install
+```
+Make sure your system have install ***nodemon*** globally.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# if nodemon not install run this script.
+npm install -g nodemon
+ 
+# or using yarn: 
+yarn global add nodemon
+``` 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+after install nodemon run server on your system.
 
-### `yarn eject`
+```bash
+# for react
+npm start || yarn start
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#for backend 
+npm run test
+```
